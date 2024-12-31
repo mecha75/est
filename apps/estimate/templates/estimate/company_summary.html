@@ -1,0 +1,67 @@
+{% extends "estimate/base.html" %}
+{% block title %} Estimate {% endblock %}
+
+{% block header%}
+<form action="{{ url_for('est.routeCompany') }}"  
+    method="post"
+    novalidate="novalidate"
+>
+    {{ form_com.csrf_token }}
+    <select name="company" id="ccode">
+        <option value="1000">연결</option>
+        <option value="1100">본사</option>
+        <option value="2100">중국합산</option>
+        <option value="2200">NKT</option>
+        <option value="2300">KTT</option>
+        <option value="2400">KTC</option>
+        <option value="3100">Japan</option>
+        <option value="3300">KTV</option>
+        <option value="5100">Germany</option>
+        <option value="5200">U.K.</option>
+        <option value="5300">France</option>
+        <option value="6100">KUSA</option>
+        <option value="6200">Canada</option>
+        <option value="6300">KTG</option>
+        <option value="8100">Mexico</option>
+        <option value="9100">Australia</option>
+    </select>
+        <label> {{ form_com.submit(class="btn btn-primary") }}</label>
+</form>
+{% endblock %}
+
+{% block modal %}
+{% endblock%}
+
+{% block content %}
+    {{ string2|safe }}
+{% endblock %}
+{% block content2 %}
+    <div class="text-left">
+            
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            조회회사 : {{ company }}
+        </button>
+    </div>
+{% endblock %}
+
+{% block javascript1 %}
+    <!-- <script>
+        var exampleModal = document.getElementById('myModal')
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        var recipient = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an AJAX request here
+        // and then do the updating in a callback.
+        //
+        // Update the modal's content.
+        var modalTitle = exampleModal.querySelector('.modal-title')
+        var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = 'New message to ' + recipient
+        modalBodyInput.value = recipient
+        })
+    </script> -->
+{% endblock %}
