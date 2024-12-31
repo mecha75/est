@@ -3424,3 +3424,6 @@ Empty DataFrame
 Columns: []
 Index: []
 [pid: 777502|app: 0|req: 1594/1594] 3.136.161.9 () {34 vars in 444 bytes} [Tue Dec 31 12:57:41 2024] GET / => generated 43058 bytes in 863 msecs (HTTP/1.1 200) 4 headers in 267 bytes (1 switches on core 0)
+[pid: 777502|app: 0|req: 1595/1595] 103.199.200.83 () {26 vars in 385 bytes} [Tue Dec 31 13:16:19 2024] GET /boaform/admin/formLogin?username=adminisp&psd=adminisp => generated 207 bytes in 20 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 777502|app: 0|req: 1596/1596] 78.153.140.148 () {36 vars in 531 bytes} [Tue Dec 31 13:43:52 2024] GET /.env => generated 207 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 777502|app: 0|req: 1597/1597] 78.153.140.148 () {40 vars in 638 bytes} [Tue Dec 31 13:43:53 2024] POST / => generated 153 bytes in 0 msecs (HTTP/1.1 405) 3 headers in 123 bytes (1 switches on core 0)
